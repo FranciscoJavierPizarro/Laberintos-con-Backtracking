@@ -1,0 +1,28 @@
+#------------------------------------------------------------------------------
+# File:   Makefile
+# Autor:  Francisco Javier Pizarro
+# Coms:   Fichero Makefile generado génericamente
+#         make all compila y generará los ejecutables
+#         make programaA compila y genera programaA
+#         ...
+#------------------------------------------------------------------------------
+
+#---------------------------------------------------------
+# Definición de macros
+CC = g++
+CPPFLAGS = -I. -std=c++11      #opciones de compilación
+LDFLAGS =                      #opciones de linkado
+RM = rm -f                     #comando para borrar ficheros
+
+all: mainLab 
+#-----------------------------------------------------------
+# Compilacion
+mainLab.o: mainLab.cpp
+	${CC} -c mainLab.cpp ${CPPFLAGS}
+#linkado
+mainLab: mainLab.o laberinto.o 
+	${CC} mainLab.o laberinto.o -o mainLab ${LDFLAGS}
+
+laberinto.o: laberinto.cpp laberinto.hpp 
+	${CC} -c laberinto.cpp ${CPPFLAGS}
+#-----------------------------------------------------------
