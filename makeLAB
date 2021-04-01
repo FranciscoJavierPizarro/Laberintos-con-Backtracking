@@ -1,9 +1,9 @@
 #------------------------------------------------------------------------------
 # File:   Makefile
 # Autor:  Francisco Javier Pizarro
-# Coms:   Fichero Makefile generado génericamente
+# Coms:   Fichero Makefile generado genéricamente
 #         make all compila y generará los ejecutables
-#         make programaA compila y genera programaA
+#         make programa compila y genera programa
 #         ...
 #------------------------------------------------------------------------------
 
