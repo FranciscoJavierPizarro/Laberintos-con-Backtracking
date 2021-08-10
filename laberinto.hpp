@@ -4,8 +4,7 @@
 // Date:   March 29, 2021
 // Coms:   Definición del tipo "Laberinto" para la práctica 3 de la asignatura
 //*****************************************************************
-#include <cstdlib>
-#include <ctime>
+
 #include <fstream>
 #include <iostream>
 using namespace std;
@@ -29,8 +28,6 @@ struct Laberinto {
     // Cada posición puede tomar el valor LIBRE, MURO, CAMINO o IMPOSIBLE
     char mapa[MAX_DIM][MAX_DIM];
 };
-
-bool mover(Laberinto& lab, int x, int y);
 
 //*************************************************************************
 // Encontrar un camino en el laberinto
@@ -73,3 +70,6 @@ void mostrarLaberinto(const Laberinto& lab);
 // Post:  Se ha mostrado el laberinto por la salida estándar
 // Coms:  Versión recursiva
 void mostrarLaberintoR(const Laberinto& lab);
+
+
+
